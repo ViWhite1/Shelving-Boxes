@@ -39,13 +39,10 @@ $shelving[$shelf] += array('empty' =>  $shelving_len-array_sum($shelving[$shelf]
     <?php foreach ($shelving as $shelf => $boxes) {?>
         <tr>
             <td bgcolor="#b0c4de"> Полка <?php echo $shelf; foreach ($boxes as $num => $wid) {?> </td>
-            <div style="width: <?php echo $wid; ?>px"><td><?php if ($num!='empty') { echo 'Коробка '.$num;} else {echo $num;} ?></td> </div>
+            <td style="width: <?php echo $wid; ?>px"><?php if ($num!='empty') { echo 'Коробка '.$num;} else {echo $num;} ?></td>
             <?php }?>
         </tr>
     <?php }?>
 </table>
 </body>
 </html>
-
-
-
