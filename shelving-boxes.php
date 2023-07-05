@@ -44,6 +44,5 @@ $shelving[$shelf] += array('empty' =>  $shelving_len-array_sum($shelving[$shelf]
             </tr>
         <?php }?>
     </table>
-?>
 </body>
 </html>
