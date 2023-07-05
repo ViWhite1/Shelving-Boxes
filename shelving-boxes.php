@@ -35,14 +35,15 @@ $shelving[$shelf] += array('empty' =>  $shelving_len-array_sum($shelving[$shelf]
     <title>Document</title>
 </head>
 <body>
-<table width="100%" cellspacing="4" cellpadding="4" border="1">
-    <?php foreach ($shelving as $shelf => $boxes) {?>
-        <tr>
-            <td bgcolor="#b0c4de" width="5%"> Полка <?php echo $shelf; foreach ($boxes as $num => $wid) {?> </td>
-            <td style="width: <?php echo $wid; ?>px"><?php if ($num!='empty') { echo 'Коробка '.$num;} else {echo $num;} ?></td>
-            <?php }?>
-        </tr>
-    <?php }?>
-</table>
+<?php foreach ($shelving as $shelf => $boxes) {?>
+    <table width="100%" cellspacing="4" cellpadding="4" border="1">
+            <tr>
+                <td bgcolor="#b0c4de" width="5%"> Полка <?php echo $shelf; foreach ($boxes as $num => $wid) {?> </td>
+                <td style="width: <?php if ($num!='empty') {echo ($wid/$shelving_len)*100;} else {echo 100;} ?>%"><?php if ($num!='empty') { echo 'Коробка '.$num;} else {echo $num;} ?></td>
+                <?php }?>
+            </tr>
+        <?php }?>
+    </table>
+?>
 </body>
 </html>
